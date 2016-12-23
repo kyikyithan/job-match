@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User_reg extends CI_Controller
+class User_reg extends MY_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
 
 		$this->load->library('form_validation');
-		$this->load->model('user_reg_model');
+		$this->load->model('user_model');
      	$this->load->database();
 	}
 

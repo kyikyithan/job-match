@@ -1,14 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
- class Job_post_list_model extends CI_Model
+ class Job_post_list_model extends MY_Model
  {
-
-    function __construct()
-    {
-       parent::__construct();
-       $this->load->database();
-    }
 
     public function get_jobpostByUserId($id)
     {

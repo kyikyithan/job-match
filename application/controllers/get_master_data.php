@@ -1,12 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Get_master_data extends CI_Controller
+class Get_master_data extends MY_Controller
 {
 	public function __construct()
 	{
 		 parent::__construct();
-		 $this->load->database();
 		 $this->load->model('get_master_data_model','get_model');
 	}
 

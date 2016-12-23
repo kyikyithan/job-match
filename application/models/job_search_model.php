@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         return $query;
     }
-    public function get_jobpost($limit, $start,$search)
+    public function search ($search = array(), $pagination = null)
     {
         $this->db->select('jp.id,jp.title,ind.name,jp.update_date');
         $this->db->from('job_post jp');
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->db->like('title', $search['jobtitle'], 'both');
         }
 
-        $this->db->limit($limit, $start);
+        $this->db->limit($pagination['per_page'], $pagination['per_page'] * ($pagination['cur_page'] - 1));
         $query = $this->db->get();
 
         return $query->result();

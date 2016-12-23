@@ -75,6 +75,11 @@ $attributes = array(
       <span class="error">* </span>
     </div>
     <div class="row">
+        <?php echo form_label('User Type', 'rdo-usertype',$attributes); ?>
+        <input type="radio" name="rdo-usertype" value="1" checked="checked"  />Company
+        <input type="radio" name="rdo-usertype" value="2"  />Job Finder
+    </div>
+    <div class="row">
         <?php
             echo form_label('Company Info', 'txt-description',$attributes);
             echo form_textarea(array(

@@ -4,15 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * @name: Login model
  */
-class Login_model extends CI_Model
+class Login_model extends MY_Model
 {
-
-    function __construct()
-    {
-        parent::__construct();
-        $this->load->database();
-    }
-
     public function validate_user($data)
     {
         $this->db->where('email', $data['email']);

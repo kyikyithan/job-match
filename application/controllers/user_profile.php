@@ -1,15 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User_profile extends CI_Controller
+class User_profile extends MY_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
 
 		$this->load->library('form_validation');
-		$this->load->model('user_profile_model');
-     	$this->load->database();
+		$this->load->model('user_model');
 	}
 
 	public function index()

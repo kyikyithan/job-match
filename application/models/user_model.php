@@ -1,12 +1,35 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
- class User_reg_model extends CI_Model
- {
-
-    function __construct()
+class Detail_model extends MY_Model
+{
+    public function delete($roll_no)
     {
-       parent::__construct();
+        if ($this->db->delete("user", "roll_no = ".$roll_no)) {
+           return true;
+        }
+    }
+
+    public function update_profile($data,$id)
+    {
+        $this->db->where("id", $id);
+        $this->db->update("user", $data);
+    }
+
+    public function check_old_password($password,$id)
+    {
+         $this->db->where('id', $id);
+         $this->db->where('password', $password);
+
+         return $this->db->get('user')->row();
+    }
+
+    public function get_user_by_userid($id)
+    {
+         $this->db->where('id', $id);
+         $query = $this->db->get('user')->row();
+
+         return $query;
     }
 
     public function insert($data)
@@ -45,5 +68,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         return $query;
     }
- }
-?>
+}

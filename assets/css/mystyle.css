@@ -1,0 +1,21 @@
+/*mystyle.css*/
+.selected { color:red; }
+.highlight { background:yellow; }
+.search-area, .tbl-area{
+	padding: 0px 0 0px 0px;
+}
+.clear{clear: both;height:30px; }
+.dataTables_filter { display: none; }
+.inner-areabox {width: 350px;float: left;}
+.lbl-search {display: block;width: 100px;float: left;}
+.row{padding: 5px;}
+.error {color: #ff0000;}
+.lbl-normal {display: block;width: 150px;float: left;}
+.inner-areabox-normal {width: 600px;float: left;}
+.msg {
+	border: 1px solid;
+	margin: 10px 0px;
+	padding:15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}

@@ -1,0 +1,94 @@
+::selection {
+    background-color: #E13300;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #E13300;
+    color: white;
+}
+
+a {
+    text-decoration: none
+}
+
+.main {
+    margin-top: 70px;
+    min-height: 450px;
+}
+
+.bg-classes p, .bg {
+    padding: 15px;
+}
+
+.form-errors {
+    color: #ffffff;
+    background: #b92c28;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.form-errors p:last-child {
+    margin-bottom: 0;
+}
+
+.required {
+    color: red;
+}
+
+.navbar-brand {
+    font-size: 25px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #9d9d9d;
+}
+
+footer {
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+
+.bs-callout {
+    padding: 10px 15px;
+    margin: 15px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+
+.bs-callout-danger {
+    border-left-color: #ce4844;
+}
+
+.bs-callout-danger h4 {
+    color: #ce4844;
+}
+
+.bs-callout-warning {
+    border-left-color: #aa6708;
+}
+
+.bs-callout-warning h4 {
+    color: #aa6708;
+}
+
+.bs-callout-info {
+    border-left-color: #1b809e;
+}
+
+.bs-callout-info h4 {
+    color: #1b809e;
+}
+
+.badge-success {
+    background-color: #5cb85c;
+}

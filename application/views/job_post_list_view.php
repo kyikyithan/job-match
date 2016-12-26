@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <h1>Posted job list</h1>
 <div class="inner-areabox-normal">
     <div class="row">
-        <table class="joblist" border="1">
+        <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>Job Title</th>

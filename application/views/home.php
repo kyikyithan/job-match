@@ -95,6 +95,6 @@ $attributes = array(
     </tbody>
 </table>
 <div class="clearfix">
-    <div class="pull-right"><?php //echo $pagination; ?></div>
+    <div class="pull-right"><?php echo $pagination; ?></div>
 </div>
 <?php echo form_close(); ?>

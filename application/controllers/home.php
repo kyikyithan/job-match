@@ -7,6 +7,7 @@ class Home extends MY_Controller
 	{
 		 parent::__construct();
 		 $this->load->helper(array('form', 'url'));
+		 $this->load->library('pagination');
 		 $this->load->model('Get_master_data_model','master');
 		 $this->load->model('Job_search_model');
 	}
@@ -23,7 +24,11 @@ class Home extends MY_Controller
             'base_url' => site_url('home/index'),
             'cur_page' => $this->uri->segment(3) ? $this->uri->segment(3) : 1,
         ));
-		$data['result'] = $this->Job_search_model->search($data['search'], $pager_config);
+		$result = $this->Job_search_model->search($data['search'], $pager_config);
+		$data['result']             = $result['data'];
+		$pager_config['total_rows'] = $result['meta']['total'];
+        $this->pagination->initialize($pager_config);
+        $data['pagination'] = $this->pagination->create_links();
 
 		$this->_render('home', $data);
 	}

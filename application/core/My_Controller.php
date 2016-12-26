@@ -25,7 +25,7 @@ class MY_Controller extends CI_Controller
             'use_page_numbers'      => true,
             'reuse_query_string'    => true,
             'cur_page'              => 1,
-            'per_page'              => 10,
+            'per_page'              => 5,
             'full_tag_open'         => '<ul class="pagination">',
             'full_tag_close'        => '</ul>',
             'num_tag_open'          => '<li>',

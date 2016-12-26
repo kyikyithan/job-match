@@ -8,15 +8,14 @@ class User_reg extends MY_Controller
 		parent::__construct();
 
 		$this->load->library('form_validation');
-		$this->load->model('user_model');
-     	$this->load->database();
+		$this->load->model('User_model');
 	}
 
 	public function index()
 	{
 		$data["msg"] = "";
 		$data = "";
-		$this->load_view($data);
+		$this->_render('User_reg_view', $data);
 	}
 
   	public function save()
@@ -29,7 +28,7 @@ class User_reg extends MY_Controller
 
 		if ($this->form_validation->run() === false) {
 			$data = "";
-			$this->load_view($data);
+			$this->_render('User_reg_view', $data);
 		} else {
 			try {
 
@@ -40,21 +39,14 @@ class User_reg extends MY_Controller
 			        'password' => $this->input->post('txt-password'),
 			        'description' => $this->input->post('txt-description'),
 		     	);
-		 		$this->user_reg_model->insert($user_data);
+		 		$this->user_model->insert($user_data);
 				$data["msg"] = "Save Successfully";
 				redirect('home');
 
 		 	} catch (Exception $e) {
 		 		$data["msg"] = "Error";
 		 }
-		 $this->load_view($data);
+		 $this->_render('User_reg_view', $data);
 	 }
   }
-
-	private function load_view($data)
-	{
-		$this->load->view('header');
-    	$this->load->view('User_reg_view', $data);
-		$this->load->view('footer');
-	}
 }

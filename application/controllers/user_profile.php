@@ -17,7 +17,7 @@ class User_profile extends MY_Controller
 		$data["tab"] = 0;
 		 if(!empty($_SESSION['id_user'])) {
 			$id = $this->input->get('id');
-			$result = $this->user_profile_model->get_user_by_userid($_SESSION['id_user']);
+			$result = $this->user_model->get_user_by_userid($_SESSION['id_user']);
 		  	$data["user_data"]	= $result;
 		}
 		$this->load_view($data);
@@ -90,7 +90,7 @@ class User_profile extends MY_Controller
 	private function load_view($data)
 	{
 		$this->load->view('header');
-    	$this->load->view('User_profile_view', $data);
+    	$this->load->view('user_profile_view', $data);
 		$this->load->view('footer');
 	}
 
